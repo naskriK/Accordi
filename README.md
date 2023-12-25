@@ -3,7 +3,7 @@
   <p align="center">
     Accordi - your own accordion!
     <br />
-    <a href="https://naskrik.github.io/Accordi/">View Demo</a>
+    <a href="https://accordi.vercel.app/">View Demo</a>
   </p>
 </div>
 
