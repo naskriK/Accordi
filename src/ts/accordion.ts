@@ -22,7 +22,11 @@ const toggleHiddenContent = (
 };
 
 const handleAccordionItemFunctionality = (target: HTMLButtonElement) => {
+  const isExpanded = target?.getAttribute("aria-expanded") === "true";
+
   hideAllFAQSContent();
+
+  if (isExpanded) return;
 
   target?.setAttribute("aria-expanded", "true");
   toggleHiddenContent(target, "false");
