@@ -141,6 +141,10 @@ body {
   margin-bottom: var(--fs-3xl);
 }
 
+.btn__icon {
+  pointer-events: none;
+}
+
 .btn__icon--minus {
   display: none;
 }
