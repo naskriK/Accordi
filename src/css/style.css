@@ -84,6 +84,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
+  padding: 0 var(--fs-default);
 }
 
 .header {
@@ -139,14 +140,35 @@ body {
   color: var(--primary-darker-purple);
   font-weight: var(--fw-semi-bold);
   margin-bottom: var(--fs-3xl);
+  text-align: left;
 }
 
 .btn__icon {
   pointer-events: none;
 }
 
-.btn__icon--minus {
+.btn--faq[aria-expanded="true"] .btn__icon--plus {
+  display: block;
+}
+
+.btn--faq[aria-expanded="false"] .btn__icon--minus {
   display: none;
+}
+
+.btn--faq[aria-expanded="true"] .btn__icon--plus {
+  display: none;
+}
+
+.btn--faq[aria-expanded="true"] .btn__icon--minus {
+  display: block;
+}
+
+.btn--faq[aria-expanded="false"] + .content__description {
+  display: none;
+}
+
+.btn--faq[aria-expanded="true"] + .content__description {
+  display: block;
 }
 
 .content__description {
@@ -157,4 +179,31 @@ body {
 
 .content__description {
   display: none;
+}
+
+@media (max-width: 62.5rem) and (orientation: landscape) {
+  .wrapper {
+    --width: 30rem;
+  }
+
+  .root {
+    padding: var(--fs-4xl) var(--fs-default);
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .header__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 27.5rem) {
+  html {
+    font-size: 15px;
+  }
+
+  .faq__title {
+    font-size: var(--fs-5xl);
+  }
 }
